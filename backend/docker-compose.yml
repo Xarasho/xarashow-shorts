@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  postgres:
+    container_name: my_postgres_container
+    image: postgres:10
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: xarasho
+      POSTGRES_PASWORDS: 123
+      POSTGRES_DB: xarashowshorts
+    volumes:
+      - my_postgres_data:/var/lib/postgresql/data
+
+
+volumes:
+  my_postgres_data:
